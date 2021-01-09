@@ -90,11 +90,12 @@ int main()
 		auto duration = duration_cast<microseconds>(stop - start);
 		auto duration1 = duration_cast<microseconds>(stop1 - start1);
 		
-		std::cout << "\n"<<std::endl;
+		std::cout << "\n\nExecution Completed! \n"<<std::endl;
 		
 		// Displaying time in millisec and microsec
-		std::cout << "Prime number generation took " << duration.count() << "uS("<<duration.count()*0.001<<"mS)\n" << std::endl;
-		std::cout << "Result display took " << duration1.count() << "uS("<<duration1.count()*0.001<<"mS)\n" << std::endl;
+		std::cout << "Prime number generation took: " << duration.count() << "uS("<<duration.count()*0.001<<"mS)\n" << std::endl;
+		std::cout << "Result display took: " << duration1.count() << "uS("<<duration1.count()*0.001<<"mS)\n" << std::endl;
+		std::cout << "Total time:  " << duration.count() + duration1.count() << "uS("<<duration1.count()*0.001<<"mS)\n" << std::endl;
 	}
 	
 	return 0; 
