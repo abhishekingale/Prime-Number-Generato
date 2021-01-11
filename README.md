@@ -1,7 +1,7 @@
 # Prime-Number-Generator
 
 Demonstrating the generation of prime numbers using two different algorithms in C++:
-#### 1. Sieve of Eratosthenes (using OpenMP)
+#### 1. Sieve of Eratosthenes 
 #### 2. Trial Division Method (Using Single thread and Multi threads)
 
 
