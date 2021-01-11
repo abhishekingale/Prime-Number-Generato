@@ -32,11 +32,13 @@ class PrimeNumber_Generator{
             }
 		// Member Function which generates prime numbers upto N using Sieve of Eratosthenes  
 		void generatePrimes(){
+			#pragma omp parallel for
 			for (int i = 0; i <= N; i++)
 				prime[i] = 1; 
 
 			const int nSqrt = (int)std::sqrt((double)N);
-				
+			
+			#pragma omp parallel for schedule(dynamic)	
 			for (int i=2; i<=nSqrt; i++) 
 			{ 
 				if (prime[i]) 

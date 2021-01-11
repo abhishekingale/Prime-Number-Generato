@@ -21,16 +21,20 @@ Using Build and run script
 ./build_and_run.sh
 ```
 
+Using OpenMP and gcc
+```bash
+g++ -o prime primeclass.cpp -fopenmp
+```
 ## Benchmarks
 
 
-| Primes upto N | Generation of primes  (mSec) | Displaying Results (mSec) |
-| :---         |     :---:      |   :---: |
-| 100000   | 1.52    | 21    |
-| 1000000   | 17.86       | 224.6      |
-| 10000000   | 219.9       | 2209.55      |
-| 100000000   | 2654.3       | 20855.6     |
-| 1000000000   | 30342.8       | 209686      |
+| Primes upto N | Generation of primes  (mSec)	|  Generation of primes[OpenMP] (mSec)	| Displaying Results (mSec) |
+| :---         	|     :---:      				|		:---:							|   :---: 					|
+| 100000   		| 1.52    						|		1.165							| 21    					|
+| 1000000   	| 17.86       					|		5.956							| 224.6      				|
+| 10000000   	| 219.9      					|		93.04							| 2209.55      				|
+| 100000000   	| 2654.3       					|		1195.95							| 20855.6     				|
+| 1000000000   	| 30342.8       				|		14806.3							| 209686      				|
 
 
 ## Contributing
