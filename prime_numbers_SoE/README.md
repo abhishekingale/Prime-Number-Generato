@@ -14,7 +14,7 @@ Using CMake and CMakeLists.txt
 mkdir build
 cmake ..
 make
-./primeParallel
+./primeclass
 ```
 Using Build and run script
 ```bash
