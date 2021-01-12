@@ -28,13 +28,13 @@ g++ -o prime primeclass.cpp -fopenmp
 ## Benchmarks
 
 
-| Primes upto N | Generation of primes  (mSec)	|  Generation of primes[OpenMP] (mSec)	| Displaying Results (mSec) |
-| :---         	|     :---:      				|		:---:							|   :---: 					|
-| 100000   		| 1.52    						|		1.165							| 21    					|
-| 1000000   	| 17.86       					|		5.956							| 224.6      				|
-| 10000000   	| 219.9      					|		93.04							| 2209.55      				|
-| 100000000   	| 2654.3       					|		1195.95							| 20855.6     				|
-| 1000000000   	| 30342.8       				|		14806.3							| 209686      				|
+| Primes upto N | generatePrimes() (mSec)	|opti_generatePrimes() (mSec)|  generatePrimes()[OpenMP] (mSec)	| Displaying Results (mSec) |
+| :---         	|     :---:      			|     :---:      			|		:---:						|   :---: 					|
+| 100000   		| 1.52    					| 0.78   					|		1.165						| 21    					|
+| 1000000   	| 17.86       				| 8.109    					|		5.956						| 224.6      				|
+| 10000000   	| 219.9      				| 108.08   					|		93.04						| 2209.55      				|
+| 100000000   	| 2654.3       				| 1139.02  					|		1195.95						| 20855.6     				|
+| 1000000000   	| 30342.8     				| 13258.8    				|		14806.3						| 209686      				|
 
 
 ## Contributing

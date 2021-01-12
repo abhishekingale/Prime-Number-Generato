@@ -2,7 +2,9 @@
 #include <vector>
 #include <iostream>
 #include <chrono>
+#include<limits>
 #include "util.hpp"
+
 
 using namespace std::chrono;
 
@@ -12,6 +14,19 @@ int main(){
 	unsigned long int nPrimes;
 	std::cout<<"Enter the number up to which you want to display prime numbers: ";
 	std::cin>> nPrimes;
+	
+	// Initial check for the provided input
+	while(1){
+		if(std::cin.fail()){
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+			std::cout<< "Input Error!" << std::endl;
+			std::cout<<"Please enter any positive integer again: "<<std::endl;
+			std::cin>> nPrimes;
+		}
+		if(!std::cin.fail())
+		break;
+	}
 	
 	std::vector<int> primes;
 	std::vector<int> result1, result2;
